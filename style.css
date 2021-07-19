@@ -1,0 +1,421 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root{
+    --text-color:#f0f4f5;
+    --background-color:#263343;
+    --accent-color:#1ed760;
+    /*color:var(--text-color);*/
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--text-color);
+}
+h1{
+font-size: 5rem;
+    font-weight: 700;
+}
+h2{
+font-size:2rem;
+font-weight: 400;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;/*Because of this part have to use min-height rather than height */
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    color: black;
+    font-size: 1.66rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.section__title{
+    font-size: 4rem;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section__title span{
+    color: #1db954;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #1ed760;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color:white;
+    background-color: #1ed760;
+}
+.brand h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+.brand h1 span{
+    color: #1db954;
+}
+
+
+
+/*header section*/
+
+
+header{
+    background-color: transparent;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: auto;
+
+}
+
+header .header{
+
+min-height: 8vh;
+
+}
+
+
+
+header .navbar{
+    display: flex;
+    max-width: 1300px;
+    width:100%;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+header .navbar__menu ul{
+    display:flex;
+    
+    
+   
+}
+header .navbar__menu ul a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: whitesmoke;
+    padding: 20px;
+    letter-spacing:  .2rem;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*endheader section*/
+
+/*home section*/
+
+
+#home{
+    position:relative;
+    z-index: 1;
+    background: url("img/beach.JPG");
+    background-size: cover;
+    background-repeat : no-repeat;
+    background-position: center;
+    
+}
+
+
+#home::after{
+    content: '';
+    position: absolute;
+    background-color:rgba(31, 30, 30, 0.3);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+#home .home{
+    padding:0 50px;
+    margin:0 auto;
+    max-width: 1200px;
+    
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+#home h1{
+    
+    color:var(--text-color);
+    
+}
+
+
+/*endhome section*/
+
+/*about section*/
+
+#about .about{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+#about .container{
+    flex-direction: column;
+}
+
+.about__top{
+    margin: 2rem;
+}
+.about__bottom{
+    margin:1rem;
+}
+
+.about__top h1{
+    margin:10px;
+}
+.about__top h2{
+    text-align: center;
+    margin: 15px;
+}
+
+.about__info{
+    display: flex;
+}
+
+#about .about__img{
+    position: relative;
+    width:25%;
+    height: 25%;
+    border: 5px solid white;
+    filter: sepia(20%);
+    margin: 15px;
+}
+
+#about .about__img::after{
+    left: -20px;
+    top:12px;
+    content: '';
+    position:absolute;
+    width:98%;
+    height: 98%;
+    border: 5px solid #1ed760;
+    z-index: -1;
+}
+
+.about__exp{
+    padding-top:15px;
+}
+.about__exp a{
+    
+    color:#263343;
+}
+.about__bottom ul{
+    display: flex;
+}
+
+.about__bottom ul div{
+    text-align: center;
+}
+
+.about__bottom li i:nth-child(n){
+    border: 1px solid var(--background-color);
+    border-radius: 100%;
+    margin:4rem 2.55rem;
+    padding:25px;
+    color:var(--background-color);
+}
+/*endabout section*/
+
+/*mywork section*/
+#mywork .mywork{
+
+    flex-direction: column;    
+}
+#mywork .container{
+    max-width: 1300px ;
+    margin: auto;
+}
+
+#mywork .section__title{
+    margin: 1rem;
+}
+
+.project__category{
+    display: flex;
+    margin: 2rem;
+}
+.project__category li:nth-child(n){
+    border: 1px solid var(--background-color);
+    font-size: 2rem;
+    font-weight: 400;
+    padding:1.5rem;
+    margin: 1rem 2rem;
+    color:var(--background-color)
+}
+
+
+.items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.item{
+    background-color: white;
+    margin: 2rem;
+    padding:1rem 1rem 3rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+
+.item h2{
+    text-align: center;
+    margin: 0px;
+    padding:0.2rem;
+    
+}
+/*end my work section*/
+
+/*contact section*/
+
+
+#contact .contact{
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 60vh;
+}
+
+#contact .section__title{
+    margin:6rem;
+}
+
+.contact__items{
+    display: flex;
+    width: 100%;
+    
+}
+
+.contact__item{
+    margin: 3rem;
+    padding:2rem;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+.contact__item:hover{
+    box-shadow:none;
+    transition: 0.5s ease box-shadow;
+    box-shadow: 0px 0px 5px 0 #0000002c;
+    
+    transition-property:box-shadow,
+}
+
+
+.contact__items .contact__item .contact__info h1{
+    font-size: 2rem;
+}
+.contact__info h2{
+    font-size: 1.8rem;
+}
+
+/* end contact section */
+
+
+
+/*footer section*/
+footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    
+}
+
+footer .footer{
+    text-align: center;    
+    min-height: 250px;
+}
+
+footer h1{
+    margin: 2rem 0;
+}
+footer h2{
+    color:whitesmoke;
+}
+footer p{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color:wheat
+}
+
+footer a:hover{
+    color:whitesmoke;
+}
+
+footer nav ul{
+    display: flex;
+}
+footer nav li{
+    margin: 2rem;
+}
+
+footer li{
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+/*endfooter section*/

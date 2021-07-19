@@ -1,0 +1,43 @@
+body{
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+
+h1{
+    text-align: center;
+    margin: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:400px
+}
+
+.btn__container{
+    display: flex;
+    justify-content: center;
+  
+}
+    
+
+#click__button{
+    font-size:10px;
+    width: 40%;
+    border-radius: 5%;    
+    border: 1px solid black;
+    font-size: large;
+    background-color: whitesmoke;
+    padding:6px;
+}
+
+
+
+
+
+

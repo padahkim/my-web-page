@@ -1,0 +1,116 @@
+body{
+    position:absolute ;
+    font-family: sans-serif;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.bgImage{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    animation: fadeIn 0.5s linear;
+}
+.background{
+    position:absolute;
+    top:0;
+    left:0;   
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.js-clock{
+    text-align: center;
+    margin-top: 22%;
+}
+.js-clock h1{
+    color:rgba(121, 150, 132, 0.8);
+    font-size: 50px;
+  
+    
+}
+.btn{
+    cursor:pointer;
+}
+
+button{
+    background:transparent;
+    color:white;
+    border:1px solid ghostwhite;
+}
+
+.btn__img{
+    width: 25px;
+    height:25px;
+}
+
+.hidden{
+    display:none;
+}
+.showing{
+    display:block;
+}
+
+#login-form{
+    text-align: center;
+}
+#login-form input{
+    background-color: rgba(243, 236, 241, 0.062);
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    color:rgba(121, 150, 132, 0.8);
+    border: 3px solid rgba(121, 150, 132, 0.8);
+    font: bolder;
+}
+
+input::placeholder {
+	color: rgba(121, 150, 132, 0.8);
+}
+
+
+
+.todo-form{
+    text-align: center;
+    
+}
+.todo-form input{
+    background-color:transparent;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    color:rgba(121, 150, 132, 0.8);
+    font: bolder;
+    border: none;
+}
+#greeting{
+    display: inline-block;
+    text-align: center;
+    background-color:rgba(250, 250, 250, 0.014);
+    font-size: 30px;
+    color:rgba(121, 150, 132, 0.8);
+    margin-top: 0;
+}
+
+ul li{
+    font-size: 20px;
+    color:blanchedalmond;
+    list-style:none;
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
