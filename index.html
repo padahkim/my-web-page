@@ -9,41 +9,41 @@
 </head>
 <body>
     <header>
-        <div class ="header container">
-            <div class="navbar">
+        <div class="header container">
+            <nav class="navbar">
                 <div class="brand">
                     <h1>
                         <span>P</span>adah
                         <span>K</span>im
                     </h1>
-                </div>
-                <nav class="navbar__menu">
-                    <div class="hamburger"></div>
-                    <ul>
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#mywork">My work</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                </div>               
+                <ul class="navbar-menu__list">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#mywork">My work</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+               
+            </nav>
+            <div class="navbar-menu__btn"><i class="fas fa-bars fa-4x"></i></div>
         </div>
+        
     </header>
 
     <section id="home">
         <div class="home container">
-            <h1>Hello,</h1>
-            <h1>My name is</h1>
-            <h1>Padah</h1>
-            <a href="#mywork" type="button" class="cta">Portfolio</a>
+            <h1 class="home-string">Hello,</h1>
+            <h1 class="home-string">My name is</h1>
+            <h1 class="home-string">Padah</h1>
+            <a href="#mywork" type="button" class="cta home-string">Portfolio</a>
         </div>
     </section>
 
@@ -57,29 +57,26 @@
                         <img src="img/face.jpg">
                     </div>
                     <div class="about__exp">
-                        <p>Born in Germany grow in Korea. Studied Industrial engineering and Applied statistics at university.  
-                            Fluent in Japanese, English and native Korean. Worked in Japan for more than three years in sales field. 
-                            I am currently studying to become a front-end developer. 
-                            I want to become a developer want to work with and i won't give up to reach this goal</p>
+                        <p>Grew up in Korea worked in Malaysia.Studied Industrial engineering and Applied statistics in Konkuk university.
+                            Fluent in Japanese, English and Korean. Worked in Japan for more than three years in sales field.
+                            Currently studying to become a developer and interested in Java and JavaScript.
+                            I want to become a developer who never give up in any situation and i won't give up to reach this goal</p>
                         <a href="#" class="cta">Download Resume</a>
                     </div>
                 </div>
-                
             </div>
             <div class="about__bottom">
                 <ul>
-                    <div><li><i class="fab fa-html5  fa-6x"></i>
-                    </li><h2>HTML</h2></div>
-                    <div><li><i class="fab fa-css3-alt fa-6x"></i></li><h2>CSS</h2></div>
+                    <div><li><i class="fab fa-java fa-6x"></i></li><h2>Java</h2></div>
                     <div><li><i class="fab fa-js fa-6x"></i></li><h2>Java Script</h2></div>
-                    <div><li><i class="fab fa-react fa-6x"></i><h2>React</h2></li></div>
-                    <div><li><i class="fab fa-node fa-6x"></i></li><h2>Node JS</h2></div>
                     <div><li><i class="fab fa-python fa-6x"></i></li><h2>Python</h2></div>
+                    <div><li><i class="fab fa-react fa-6x"></i><h2>React</h2></li></div>
+                    <div><li><i class="fab fa-html5  fa-6x"></i></li><h2>HTML</h2></div>
+                    <div><li><i class="fab fa-css3-alt fa-6x"></i></li><h2>CSS</h2></div>
                 </ul>
             </div>
         </div>
     </section>
-    
     <section id="mywork">
         <div class="mywork container">
             <h1 class="section__title">My <span>W</span>ork</h1>
@@ -87,8 +84,8 @@
             <ul class="project__category">
                 <li class="cta">Vanila JavaScript</li>
                 <li class="cta">React</li>
-                <li class="cta">Node JS</li>
-                <li class="cta">Fullstack</li>
+                <li class="cta">Java</li>
+                <li class="cta">Python</li>
             </ul>
             <div class="items">
                 <div class="item">
@@ -97,26 +94,26 @@
                     <h2>Todo List</h2>
                 </div>
                 <div class="item">
-                    <a href="projects/Color flipper/index.html">
-                    <img src="img/ColorFlip.jpg"></a>
-                    <h2>Color Fliiper</h2>
+                    <a href="projects/Tick-tack-toe/index.html">
+                        <img src="img/Tick-tack-toe.jpg"></a>
+                        <h2>Tick-tack-toe game</h2>
                 </div>
-                <div class="item">
-                    <a href="">
-                        <img src=""></a>
-                        <h2>Calender</h2>
+                <div class="item">Card Game finding same picture
                 </div>
                 <div class="item">
                     <a href="">
                         <img src=""></a>
                         <h2>Baseball Game</h2>
-
                 </div>
-                <div class="item">E</div>
+                <div class="item">Calender</div>
                 <div class="item">F</div>
                 <div class="item">G</div>
                 <div class="item">H</div>
-                <div class="item">I</div>
+                <div class="item">
+                    <a href="projects/Color flipper/index.html">
+                        <img src="img/ColorFlip.jpg"></a>
+                        <h2>Color Fliiper</h2>
+                </div>
             </div>
         </div>
        </section>
@@ -148,10 +145,7 @@
                         <h2>Yongin city, Korea</h2>
                     </div>
                 </div>
-                
             </div>
-        
-        
         </div>
         </section>
 
@@ -175,5 +169,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/104b09059f.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

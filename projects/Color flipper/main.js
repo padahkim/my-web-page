@@ -38,11 +38,7 @@ function hexGenerator() {
       result += hexNumbers[randomIndex];
     }
 
-
     h1.innerText = `HEX COLOR:${result}`
     body.style.backgroundColor = result
-    
     return result;
   }
-
-  

@@ -8,6 +8,11 @@
     /*color:var(--text-color);*/
 }
 
+body{
+    overflow-x: hidden;
+    
+}
+
 html{
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -26,6 +31,7 @@ font-size:2rem;
 font-weight: 400;
 
 }
+
 
 
 a{
@@ -87,11 +93,14 @@ p {
     font-size: 3rem;
     font-weight: 700;
     color: white;
+    padding: 20px;
 }
 .brand h1 span{
     color: #1db954;
 }
-
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
 
 
 /*header section*/
@@ -120,18 +129,13 @@ header .navbar{
     width:100%;
     height:100%;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
     padding: 0 10px;
 }
 
 
-header .navbar__menu ul{
-    display:flex;
-    
-    
-   
-}
-header .navbar__menu ul a{
+
+header ul a{
     font-size: 2.5rem;
     font-weight: 700;
     color: whitesmoke;
@@ -140,6 +144,77 @@ header .navbar__menu ul a{
     text-decoration: none;
     display: block;
 }
+
+.navbar-menu__list{
+    display: flex;
+}
+
+header ul li a:hover{
+    color:#1ed760;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+
+.navbar-menu__btn:hover{
+    color:#1ed760;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+@media screen and (max-width: 850px){
+    .navbar{
+        flex-direction: column; 
+        align-items: flex-start;   
+    }
+    .navbar-menu__list{
+        list-style: none;
+        position: absolute;
+        background-color: rgb(31, 30, 30);
+        width: 100vw;
+        height: 100vh;
+        left: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: .5s ease left;
+        
+    }
+   /* .navbar-menu__list{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }*/
+
+    .navbar-menu__btn{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+}
+
+@media screen and (min-width:850px){     
+    .navbar-menu__btn{
+        display: none;
+    }
+}
+.active{
+    display: flex;
+    left: 0;
+}
+.hidden{
+    display: none;
+}
+
+
+
+
 
 
 /*endheader section*/
@@ -154,7 +229,6 @@ header .navbar__menu ul a{
     background-size: cover;
     background-repeat : no-repeat;
     background-position: center;
-    
 }
 
 
@@ -417,5 +491,12 @@ footer li{
     text-decoration: none;
     color:whitesmoke;
 }
+
+.hidden{
+    display: none;
+}
+
+
+
 
 /*endfooter section*/
