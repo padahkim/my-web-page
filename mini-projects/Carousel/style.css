@@ -4,16 +4,18 @@ body {
   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
 }
-
 #carousel__content {
   width: 60%;
   margin: auto;
   margin-top: 7%;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .carousel-slider {
   display: flex;
   width: 100%;
+  height: 70vh;
   position: relative;
 }
 .slider__item {
@@ -28,7 +30,6 @@ body {
 .hidden {
   display: none;
 }
-
 button{
   position : absolute;
   top: 50%;
@@ -45,22 +46,12 @@ button:hover {
   color: lightsalmon;
   cursor: pointer;
 }
-
-/*
-#slider .slider__item:nth-child(1) {
-  background-image: url(images/4.jpg);
+li { 
+ display: flex;
+ list-style: none;
+ margin: auto;
 }
-
-
-#slider .slider__item:nth-child(2) {
-  background-image: url(images/2.jpg);
+i {
+  border: none;
+  border-radius: 100%;
 }
-
-#slider .slider__item:nth-child(3) {
-  background-image: url(images/3.jpg);
-}
-
-.showing {
-  z-index: 1;
-}
-*/

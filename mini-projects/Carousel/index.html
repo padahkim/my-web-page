@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Carousel Japan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,10 +17,19 @@
       <img class ="slider__item hidden" src="images/2.jpg"alt="">
       <img class ="slider__item hidden" src="images/3.jpg"alt="">
     </div>
+    <li>
+      <ul><i class="far fa-circle" data-index-number="1"></i></ul><!--ul은 i의 부모가 아님.currentTarget으로 안잡힘.이벤트를i상에만 정확히 걸 수 있음-->
+      <ul><i class="far fa-circle" data-index-number="2"></i></ul>
+      <ul><i class="far fa-circle" data-index-number="3"></i></ul>
+      <ul><i class="far fa-circle" data-index-number="4"></i></ul>
+    </li>
   </section>
 
   <button id="prevBtn"><i class="fas fa-arrow-circle-left fa-3x"></i></button>
   <button id="nextBtn"><i class="fas fa-arrow-circle-right fa-3x"></i></button>
+
+  
+
 
   <script src="app.js"></script>
   <script src="https://kit.fontawesome.com/104b09059f.js" crossorigin="anonymous"></script>
