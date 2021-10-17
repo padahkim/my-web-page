@@ -1,19 +1,32 @@
-const leftArrow = document.querySelector(".left.arrow");
-const rightArrow = document.querySelector(".right.arrow");
+const slides = document.querySelectorAll(".slider__item");
+const prevBtn = document.querySelector("#prevBtn");
+const nextBtn = document.querySelector("#nextBtn");
 
-const SHOWING__CLASS ="showing";
+const HIDDEN__CLASS ="hidden";
 
-function clickLeftArrow() {
-  console.log("left")
+let slideCounter = 0;
+
+function flipSlide() {
+  if (slideCounter >= slides.length) {
+    slideCounter = 0;
+  } else if(slideCounter <0) {
+    slideCounter = slides.length + slideCounter;
+  }
+  slides.forEach(element=>element.classList.add(HIDDEN__CLASS))
+  slides[slideCounter].classList.remove(HIDDEN__CLASS)
 }
 
-function clickRightArrow() {
-  console.log("right")
+function clickNextBtn() {
+  slideCounter++;
+  flipSlide()
+}
+function clickPrevBtn() {
+  slideCounter--;
+  flipSlide()
 }
 
-
-leftArrow.addEventListener("click", clickLeftArrow);
-rightArrow.addEventListener("click", clickRightArrow);
-
+nextBtn.addEventListener("click", clickNextBtn);
+prevBtn.addEventListener("click", clickPrevBtn);
+flipSlide();
 
 
