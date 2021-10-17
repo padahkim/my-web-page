@@ -1,57 +1,48 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-:root{
+:root {
     --text-color:#f0f4f5;
     --background-color:#263343;
     --accent-color:#1ed760;
     /*color:var(--text-color);*/
 }
-
-body{
+body {
     overflow-x: hidden;
-    
 }
 
-html{
+html {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--text-color);
 }
-h1{
+h1 {
 font-size: 5rem;
     font-weight: 700;
 }
-h2{
+h2 {
 font-size:2rem;
 font-weight: 400;
-
 }
-
-
-
-a{
+a {
     text-decoration: none;
 }
-
-.container{
+.container {
     min-height: 100vh;/*Because of this part have to use min-height rather than height */
     width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
 }
-
-img{
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-
 p {
     color: black;
     font-size: 1.66rem;
@@ -60,8 +51,7 @@ p {
     font-weight: 300;
     letter-spacing: .05rem;
 }
-
-.section__title{
+.section__title {
     font-size: 4rem;
     font-weight: 400;
     color: black;
@@ -69,7 +59,7 @@ p {
     letter-spacing: .2rem;
     text-align: center;
 }
-.section__title span{
+.section__title span {
     color: #1db954;
 }
 .cta {
@@ -89,41 +79,31 @@ p {
     color:white;
     background-color: #1ed760;
 }
-.brand h1{
+.brand h1 {
     font-size: 3rem;
     font-weight: 700;
     color: white;
     padding: 20px;
 }
-.brand h1 span{
+.brand h1 span {
     color: #1db954;
 }
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
 
-
 /*header section*/
-
-
-header{
+header {
     background-color: transparent;
     position: fixed;
     z-index: 10;
     width: 100vw;
     height: auto;
-
 }
-
-header .header{
-
+header .header {
 min-height: 8vh;
-
 }
-
-
-
-header .navbar{
+header .navbar {
     display: flex;
     max-width: 1300px;
     width:100%;
@@ -132,10 +112,7 @@ header .navbar{
     /*align-items: center;*/
     padding: 0 10px;
 }
-
-
-
-header ul a{
+header ul a {
     font-size: 2.5rem;
     font-weight: 700;
     color: whitesmoke;
@@ -144,30 +121,25 @@ header ul a{
     text-decoration: none;
     display: block;
 }
-
-.navbar-menu__list{
+.navbar-menu__list {
     display: flex;
 }
-
-header ul li a:hover{
+header ul li a:hover {
     color:#1ed760;
     transition: .3s ease background-color;
     transition-property: background-color, color;
 }
-
-
-.navbar-menu__btn:hover{
+.navbar-menu__btn:hover {
     color:#1ed760;
     transition: .3s ease background-color;
     transition-property: background-color, color;
 }
-
-@media screen and (max-width: 850px){
-    .navbar{
+@media screen and (max-width: 850px) {
+    .navbar {
         flex-direction: column; 
         align-items: flex-start;   
     }
-    .navbar-menu__list{
+    .navbar-menu__list {
         list-style: none;
         position: absolute;
         background-color: rgb(31, 30, 30);
@@ -182,7 +154,6 @@ header ul li a:hover{
         z-index: 1;
         overflow-x: hidden;
         transition: .5s ease left;
-        
     }
    /* .navbar-menu__list{
         display: none;
@@ -191,38 +162,28 @@ header ul li a:hover{
         width: 100%;
 
     }*/
-
-    .navbar-menu__btn{
+    .navbar-menu__btn {
         position: absolute;
         right: 20px;
         top: 10px;
     }
 }
-
-@media screen and (min-width:850px){     
+@media screen and (min-width:850px) {     
     .navbar-menu__btn{
         display: none;
     }
 }
-.active{
+.active {
     display: flex;
     left: 0;
 }
-.hidden{
+.hidden {
     display: none;
 }
-
-
-
-
-
-
 /*endheader section*/
 
 /*home section*/
-
-
-#home{
+#home {
     position:relative;
     z-index: 1;
     background: url("img/beach.jpg");
@@ -230,9 +191,7 @@ header ul li a:hover{
     background-repeat : no-repeat;
     background-position: center;
 }
-
-
-#home::after{
+#home::after {
     content: '';
     position: absolute;
     background-color:rgba(31, 30, 30, 0.3);
@@ -242,60 +201,44 @@ header ul li a:hover{
     width: 100%;
     z-index: -1;
 }
-
-
-#home .home{
+#home .home {
     padding:0 50px;
     margin:0 auto;
     max-width: 1200px;
-    
     flex-direction: column;
     align-items: flex-start;
 }
-
-
-
-#home h1{
-    
+#home h1 {
     color:var(--text-color);
-    
 }
-
-
 /*endhome section*/
 
 /*about section*/
-
-#about .about{
+#about .about {
     max-width:1100px;
     margin:auto;
     padding:100px 20px;
 }
-
-#about .container{
+#about .container {
     flex-direction: column;
 }
-
-.about__top{
+.about__top {
     margin: 2rem;
 }
-.about__bottom{
+.about__bottom {
     margin:1rem;
 }
-
-.about__top h1{
+.about__top h1 {
     margin:10px;
 }
-.about__top h2{
+.about__top h2 {
     text-align: center;
     margin: 15px;
 }
-
-.about__info{
+.about__info {
     display: flex;
 }
-
-#about .about__img{
+#about .about__img {
     position: relative;
     width:25%;
     height: 25%;
@@ -303,8 +246,7 @@ header ul li a:hover{
     filter: sepia(20%);
     margin: 15px;
 }
-
-#about .about__img::after{
+#about .about__img::after {
     left: -20px;
     top:12px;
     content: '';
@@ -314,23 +256,19 @@ header ul li a:hover{
     border: 5px solid #1ed760;
     z-index: -1;
 }
-
-.about__exp{
+.about__exp {
     padding-top:15px;
 }
-.about__exp a{
-    
+.about__exp a {
     color:#263343;
 }
-.about__bottom ul{
+.about__bottom ul {
     display: flex;
 }
-
-.about__bottom ul div{
+.about__bottom ul div {
     text-align: center;
 }
-
-.about__bottom li i:nth-child(n){
+.about__bottom li i:nth-child(n) {
     border: 1px solid var(--background-color);
     border-radius: 100%;
     margin:4rem 2.55rem;
@@ -340,24 +278,22 @@ header ul li a:hover{
 /*endabout section*/
 
 /*mywork section*/
-#mywork .mywork{
+#mywork .mywork {
 
     flex-direction: column;    
 }
-#mywork .container{
+#mywork .container {
     max-width: 1300px ;
     margin: auto;
 }
-
-#mywork .section__title{
+#mywork .section__title {
     margin: 1rem;
 }
-
-.project__category{
+.project__category {
     display: flex;
     margin: 2rem;
 }
-.project__category li:nth-child(n){
+.project__category li:nth-child(n) {
     border: 1px solid var(--background-color);
     font-size: 2rem;
     font-weight: 400;
@@ -365,51 +301,40 @@ header ul li a:hover{
     margin: 1rem 2rem;
     color:var(--background-color)
 }
-
-
-.items{
+.items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
 }
-
-.item{
+.item {
     background-color: white;
     margin: 2rem;
     padding:1rem 1rem 3rem 1rem;
     border-radius: 10px;
     box-shadow: 0px 0px 18px 0 #0000002c;
+    height: 400px;
 }
-
-.item h2{
+.item h2 {
     text-align: center;
     margin: 0px;
     padding:0.2rem;
-    
 }
 /*end my work section*/
 
 /*contact section*/
-
-
-#contact .contact{
+#contact .contact {
     flex-direction: column;
     max-width: 1300px;
     margin: auto;
     min-height: 60vh;
 }
-
-#contact .section__title{
+#contact .section__title {
     margin:6rem;
 }
-
-.contact__items{
+.contact__items {
     display: flex;
     width: 100%;
-    
 }
-
-.contact__item{
+.contact__item {
     margin: 3rem;
     padding:2rem;
     width: 30%;
@@ -423,80 +348,60 @@ header ul li a:hover{
     border-radius: 10px;
     box-shadow: 0px 0px 18px 0 #0000002c;
 }
-.contact__item:hover{
+.contact__item:hover {
     box-shadow:none;
     transition: 0.5s ease box-shadow;
     box-shadow: 0px 0px 5px 0 #0000002c;
-    
     transition-property:box-shadow,
 }
-
-
-.contact__items .contact__item .contact__info h1{
+.contact__items .contact__item .contact__info h1 {
     font-size: 2rem;
 }
-.contact__info h2{
+.contact__info h2 {
     font-size: 1.8rem;
 }
-
 /* end contact section */
 
-
-
 /*footer section*/
-footer{
+footer {
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    
 }
-
-footer .footer{
+footer .footer {
     text-align: center;    
     min-height: 250px;
 }
-
-footer h1{
+footer h1 {
     margin: 2rem 0;
 }
-footer h2{
+footer h2 {
     color:whitesmoke;
 }
-footer p{
+footer p {
     color: whitesmoke;
     font-size: 1.2rem;
 }
-
-footer .container{
+footer .container {
     display: flex;
     flex-direction: column;
-    
 }
-
-footer a{
+footer a {
     text-decoration: none;
     color:wheat
 }
-
-footer a:hover{
+footer a:hover {
     color:whitesmoke;
 }
-
-footer nav ul{
+footer nav ul {
     display: flex;
 }
-footer nav li{
+footer nav li {
     margin: 2rem;
 }
-
-footer li{
+footer li {
     text-decoration: none;
     color:whitesmoke;
 }
-
-.hidden{
+.hidden {
     display: none;
 }
-
-
-
-
 /*endfooter section*/
