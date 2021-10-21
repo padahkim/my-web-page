@@ -5,8 +5,8 @@ const startScreenImg = startPage.querySelector(".start-screen__img");
 const gamePage = document.querySelector(".game-page")
 const gameContentPage = gamePage.querySelector(".game-content");
 const cardCover = gamePage.querySelector(".cover");
-const cardBackside = gamePage.querySelector(".backside");
-const cardCoverNumber = gamePage.querySelectorAll('[count]');
+const cardInside = gamePage.querySelector(".card-inside");
+const insideCardsArray = [];
 
 const HIDDEN = "hidden";
 
@@ -18,12 +18,45 @@ function startGame() {
   makeCardCover();
 }
 
+function showingInsideCard() {
+  for (index of insideCardsArray) {
+  const card = document.createElement('div');
+  card.classList.add("item-list");
+  console.log(index)
+  card.innerHTML = 
+  `<img class="inside-img" src=${index}/>`
+  cardInside.appendChild(card);
+  }
+}
 
+// Fisher–Yates shuffle
+function shuffleArray(array) {
+  let lastIndex = array.length - 1;
+  while (lastIndex > -1) {
+    const randomIndex = Math.floor(Math.random()*lastIndex + 1);
+    let temp = array[randomIndex];
+    array[randomIndex] = array[lastIndex];
+    array[lastIndex] =  temp;
+    lastIndex--;
+  }
+  showingInsideCard();
+}
 
+function makeInsideCard() {
+  for(let j = 0; j < 2; j++) {
+    for (let i = 0; i < 8; i++) {
+      insideCardsArray.push(`"images/${i+1}.jpg"`);
+    }
+  }
+  //oppositeSideArray.sort(() => Math.random() - 0.5)
+  shuffleArray(insideCardsArray);
+}
+ 
+/*
 function makeCardInside() {
   for(let j = 0; j < 2; j++) {
     for (let i = 0; i < 8; i++) {
-      let card = document.createElement('div');
+      const card = document.createElement('div');
       card.className = "item-list";
       card.innerHTML = 
       `<img data-count="${i}" src="images/${i+1}.jpg"/>
@@ -32,28 +65,25 @@ function makeCardInside() {
     }
   }
 }
+*/
 
 function makeCardCover() {
   for (let i = 0; i < 16; i++) {
-    let card = document.createElement('div');
-    card.className = "item-list";
+    const card = document.createElement('div');
+    card.classList.add("item-list");
     card.innerHTML = 
-    `<img data-count="${i}" src="images/card-cover.jpg"/>
-    </div>`
-    cardCover.append(card);
+    `<img class="cover-img" src="images/card-cover.jpg"/>`
+    cardCover.appendChild(card);
   }
-  makeCardInside();
+  makeInsideCard();
 }
-
-
 
 
 function clickCardCover(event) {
+  if (event.target.classList.contains("cover-img")) {
   event.target.classList.add(HIDDEN);
-  console.log(event.target);
-  console.log(event.curretTarget);
-  //event.target.dataset.count.
+  }
 }
-
 startButton.addEventListener("click", startGame);
-gameContentPage.addEventListener("click", clickCardCover);
+cardCover.addEventListener("click", clickCardCover);
+
